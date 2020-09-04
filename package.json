@@ -1,0 +1,22 @@
+{
+  "name": "web3-api-setup",
+  "version": "1.0.0",
+  "description": "This repo provides necessary web3 APIs to interact with smart contract.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sam-Devs/Web3-API-Setup.git"
+  },
+  "author": "Sam Ayorinde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sam-Devs/Web3-API-Setup/issues"
+  },
+  "homepage": "https://github.com/Sam-Devs/Web3-API-Setup#readme",
+  "dependencies": {
+    "web3": "^1.2.11"
+  }
+}
