@@ -1,9 +1,6 @@
 // @ts-nocheck
 
-const Web3 = require('web3')
-
 // ganache local blockchain
-const ganache = 'http://127.0.0.1:7545'
 
 // infura
 // Mainnet
@@ -23,6 +20,7 @@ const ganache = 'http://127.0.0.1:7545'
 //  const web3 = new Web3(geth)
 
 const Web3 = require('web3')
+const ganache = 'http://127.0.0.1:7545'
 const web3 = new Web3(ganache)
 
 const accounts = async () => {
