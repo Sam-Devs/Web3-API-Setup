@@ -21,8 +21,8 @@ const Web3 = require('web3')
 const ganache = 'http://127.0.0.1:7545'
 const web3 = new Web3(ganache)
 
-const accounts = async () => {
-    const accounts = await new web3.eth.accounts.create()
+const accounts = () => {
+    const accounts = new web3.eth.accounts.create()
     console.log(accounts)
 }
 
