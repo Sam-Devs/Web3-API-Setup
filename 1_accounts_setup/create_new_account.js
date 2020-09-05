@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-// infura
+// infura Network
 // Mainnet
 // const infura_mainnet = 'https://mainnet.infura.io/v3/006328960ee54ae8a36245d0d0b3665b'
 
@@ -22,8 +22,8 @@ const ganache = 'http://127.0.0.1:7545'
 const web3 = new Web3(ganache)
 
 const accounts = () => {
-    const accounts = web3.eth.accounts.create()
-    console.log(accounts)
+    const account = web3.eth.accounts.create()
+    console.log(account)
 }
 
 accounts();
