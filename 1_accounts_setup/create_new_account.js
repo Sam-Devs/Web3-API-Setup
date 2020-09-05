@@ -1,12 +1,10 @@
 // @ts-nocheck
 
-// ganache local blockchain
-
 // infura
 // Mainnet
 // const infura_mainnet = 'https://mainnet.infura.io/v3/006328960ee54ae8a36245d0d0b3665b'
 
-//Testnet => Ropsten
+// Testnet => Ropsten
 // const infura_ropsten = 'https://ropsten.infura.io/v3/006328960ee54ae8a36245d0d0b3665b'
 
 // Geth
