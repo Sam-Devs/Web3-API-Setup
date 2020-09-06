@@ -29,6 +29,10 @@ const getAccount = () => {
         } else {
             console.log(error);
         }
+
+        // Using try and catch returns 
+        // Error: Please pass numbers as strings or BN objects to avoid precision errors.
+        // ****Note**** This will be fixed 
         // try {
         //     const balance = web3.utils.fromWei(parseInt(account),"ether")
         //     console.log(balance);
