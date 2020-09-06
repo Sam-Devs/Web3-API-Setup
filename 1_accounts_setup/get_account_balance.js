@@ -23,13 +23,18 @@ const web3 = new Web3(infura_mainnet);
 const address = "0x742d35cc6634c0532925a3b844bc454e4438f44e";
 
 const getAccount = () => {
-    const account = web3.eth.getBalance(address, () => {
-        try {
-            const balance = web3.utils.fromWei(parseInt(account),"ether")
-            console.log(balance);
-        } catch (error) {
+    web3.eth.getBalance(address, (balance, error) => {
+        if (!error) {
+            return getBalance = web3.utils.fromWei(balance, 'ether')
+        } else {
             console.log(error);
         }
+        // try {
+        //     const balance = web3.utils.fromWei(parseInt(account),"ether")
+        //     console.log(balance);
+        // } catch (error) {
+        //     console.log(error);
+        // }
     })
 }
 
