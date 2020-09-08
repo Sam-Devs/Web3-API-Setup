@@ -23,7 +23,7 @@ const web3 = new Web3(infura_mainnet);
 const address = "0x742d35cc6634c0532925a3b844bc454e4438f44e";
 
 // Using await/async
-const getAccountBalance = async () => {
+const accounts = async () => {
     try {
         const accountBalance = await web3.eth.getBalance(address)
         console.log(accountBalance)
@@ -31,11 +31,11 @@ const getAccountBalance = async () => {
         console.log(error);
     }
 }
-getAccountBalance();
+accounts();
 
 
 // Using a callback function
-const getAccountBalance2 = () => {
+const getAccount = () => {
     web3.eth.getBalance(address, (balance, error) => {
         if (!error) {
             return getBalance = web3.utils.fromWei(balance, 'ether')
@@ -45,4 +45,4 @@ const getAccountBalance2 = () => {
     })
 }
 
-getAccountBalance2();
+getAccount();
