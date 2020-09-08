@@ -24,11 +24,10 @@ const web3 = new Web3(infura_mainnet);
 // Using await/async
 const createWallet = async () => {
     try {
-        // const wallet = await web3.eth.accounts.create();
-        const wallet = await web3.eth.accounts.create(web3.utils.randomHex(32));
-        // const account = web3.eth.accounts.create();
-        // wallet.add(account.privateKey);
-        console.log(wallet)
+        const wallet = await web3.eth.accounts.wallet.create(2, '54674321§3456764321§345674321§3453647544±±±§±±±!!!43534534534534');
+        const account = web3.eth.accounts.create();
+        const mainWallet = wallet.add(account.privateKey);
+        console.log(mainWallet)
     } catch (error) {
         console.log(error);
     }
