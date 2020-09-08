@@ -23,22 +23,24 @@ const web3 = new Web3(infura_mainnet);
 
 // this function creates multiple accounts/wallets
 //**Note**//  two was passed as the first parameter, it will return two different accounts/wallets with different privatekeys and privatekeys
-// const createMultipleWallet = async () => {
-//     try {
-//         const wallet = await web3.eth.accounts.wallet.create(2, '54674321§3456764321§345674321§3453647544±±±§±±±!!!43534534534534');
-//         console.log(wallet)
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
-// createMultipleWallet();
+const createMultipleWallet = async () => {
+    try {
+        const wallet = await web3.eth.accounts.wallet.create(2, '54674321§3456764321§345674321§3453647544±±±§±±±!!!43534534534534');
+        console.log(wallet)
+    } catch (error) {
+        console.log(error);
+    }
+}
+createMultipleWallet();
 
 
-// this function creates a single account/wallet without passing anything in the parameter.
+// this function creates a single account/wallet using the wallet.add() method
 const createWallet = async () => {
     try {
-        const wallet = await web3.eth.accounts.wallet.create();
-        console.log(wallet)
+        const wallet = await web3.eth.accounts.wallet.create(2, '54674321§3456764321§345674321§3453647544±±±§±±±!!!43534534534534');
+        const account = web3.eth.accounts.create();
+        const accountAdd = wallet.add(account);
+        console.log(accountAdd)
     } catch (error) {
         console.log(error);
     }
