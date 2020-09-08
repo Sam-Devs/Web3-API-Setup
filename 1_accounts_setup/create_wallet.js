@@ -24,24 +24,26 @@ const web3 = new Web3(infura_mainnet);
 // Using await/async
 const createWallet = async () => {
     try {
-        const accountBalance = await web3.eth.getBalance(address)
-        console.log(accountBalance)
+        let wallet = await web3.eth.accounts.create(2, "some random strings" )
+        const account = web3.eth.accounts.create();
+        wallet.add(account.privateKey);
+        console.log(wallet)
     } catch (error) {
         console.log(error);
     }
 }
-accounts();
+createWallet();
 
 
 // Using a callback function
-const getAccount = () => {
-    web3.eth.getBalance(address, (balance, error) => {
-        if (!error) {
-            return getBalance = web3.utils.fromWei(balance, 'ether')
-        } else {
-            console.log(error);
-        }
-    })
-}
+// const getAccount = () => {
+//     web3.eth.getBalance(address, (balance, error) => {
+//         if (!error) {
+//             return getBalance = web3.utils.fromWei(balance, 'ether')
+//         } else {
+//             console.log(error);
+//         }
+//     })
+// }
 
-getAccount();
+// getAccount();
